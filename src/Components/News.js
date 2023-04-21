@@ -7,7 +7,9 @@ const News = (props) => {
   const [articles, setarticles] = useState([])
   const [loading, setloading] = useState(true)
   const [page, setpage] = useState(1)
+  // eslint-disable-next-line
   const [totalResults, settotalResults] = useState(0)
+  // eslint-disable-next-line
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);

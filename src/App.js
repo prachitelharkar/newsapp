@@ -10,16 +10,18 @@ const App =()=>{
   const [progress, setProgress] = useState(0)
     return (
       <div>
+        
         <Router>
         <Navbar/> 
+        
         <LoadingBar
         height={3}
         color='#f11946'
         progress={progress} 
       />
+
         <Routes>
             <Route path='/' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
-           { /* <Route path='/buisness' element={<News setProgress={setProgress} key='buisness' pageSize={pageSize} country='in' category='buisness' />}></Route>*/}
             <Route path='/entertainment' element={<News setProgress={setProgress} key='entertainment' pageSize={pageSize} country='in' category='entertainment' />}></Route>
             <Route path='/health' element={<News setProgress={setProgress} key='health' pageSize={pageSize} country='in' category='health' />}></Route>
             <Route path='/general' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
@@ -27,8 +29,12 @@ const App =()=>{
             <Route path='/sports' element={<News setProgress={setProgress} key='sports' pageSize={pageSize} country='in' category='sports' />}></Route>
             <Route path='/technology' element={<News setProgress={setProgress} key='technology' pageSize={pageSize} country='in' category='technology' />}></Route>
           </Routes>
+
        </Router>
+        
       </div>
+      
+
     )
 }
 export default App;
