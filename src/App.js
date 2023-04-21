@@ -21,7 +21,7 @@ const App =()=>{
       />
 
         <Routes>
-            <Route path='/' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
+            <Route path='/newsapp' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
             <Route path='/entertainment' element={<News setProgress={setProgress} key='entertainment' pageSize={pageSize} country='in' category='entertainment' />}></Route>
             <Route path='/health' element={<News setProgress={setProgress} key='health' pageSize={pageSize} country='in' category='health' />}></Route>
             <Route path='/general' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
