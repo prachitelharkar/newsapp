@@ -4,14 +4,14 @@ import Navbar from './Components/Navbar';
 import News from './Components/News';
 import LoadingBar from 'react-top-loading-bar';
 
-import { BrowserRouter as Router, Routes,Route,}from "react-router-dom";
+import { BrowserRouter ,Routes,Route,}from "react-router-dom";
 const App =()=>{
   const pageSize = 36;
   const [progress, setProgress] = useState(0)
     return (
       <div>
         
-        <Router>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar/> 
         
         <LoadingBar
@@ -21,7 +21,7 @@ const App =()=>{
       />
 
         <Routes>
-            <Route path='/newsapp' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
+            <Route path='/' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
             <Route path='/entertainment' element={<News setProgress={setProgress} key='entertainment' pageSize={pageSize} country='in' category='entertainment' />}></Route>
             <Route path='/health' element={<News setProgress={setProgress} key='health' pageSize={pageSize} country='in' category='health' />}></Route>
             <Route path='/general' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
@@ -30,7 +30,7 @@ const App =()=>{
             <Route path='/technology' element={<News setProgress={setProgress} key='technology' pageSize={pageSize} country='in' category='technology' />}></Route>
           </Routes>
 
-       </Router>
+       </BrowserRouter>
         
       </div>
       
