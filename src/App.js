@@ -13,12 +13,12 @@ const App =()=>{
         
         <Router>
         <Navbar/> 
-        
         <LoadingBar
         height={3}
         color='#f11946'
         progress={progress} 
       />
+      
 
         <Routes>
             <Route path='/' element={<News setProgress={setProgress} key='general' pageSize={pageSize} country='in' category='general' />}></Route>
